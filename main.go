@@ -34,6 +34,7 @@ func main() {
 			bits <<= (8 * (missing))
 		}
 
+		// TODO: simplify the missing logic by maybe taking the length of the group and if its less than 6 then shift it over to the left X spaces
 		for j := 3; j >= missing; j-- {
 			sixBitGroup := (bits & (0b111111 << (j * 6))) >> (j * 6)
 			fmt.Fprintf(&encoded, "%c", table[sixBitGroup])
