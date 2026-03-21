@@ -20,16 +20,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/is386/super-base-64/base64"
+	"github.com/is386/super-base-64/superbase64"
 )
 
 func main() {
 	// Encode
-	encoded := base64.NewStdEncoding().Encode([]byte("Hello, World!"))
+	encoded := superbase64.NewStdEncoding().Encode([]byte("Hello, World!"))
 	fmt.Println(encoded) // SGVsbG8sIFdvcmxkIQ==
 
 	// Decode
-	decoded, err := base64.NewStdEncoding().Decode(encoded)
+	decoded, err := superbase64.NewStdEncoding().Decode(encoded)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -37,7 +37,7 @@ func main() {
 	fmt.Println(string(decoded)) // Hello, World!
 
 	// URL-safe encoding
-	urlEncoded := base64.NewURLEncoding().Encode([]byte("Hello, World!"))
+	urlEncoded := superbase64.NewURLEncoding().Encode([]byte("Hello, World!"))
 	fmt.Println(urlEncoded) // SGVsbG8sIFdvcmxkIQ==
 }
 ```

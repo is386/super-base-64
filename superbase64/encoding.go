@@ -1,6 +1,6 @@
-// Package base64 implements base64 encoding and decoding
+// Package superbase64 implements base64 encoding and decoding
 // as specified in RFC 4648.
-package base64
+package superbase64
 
 import (
 	"errors"
@@ -28,7 +28,7 @@ func buildReverseLookupTable(table string) [256]int {
 		reverseTable[i] = -1
 	}
 	for i, c := range table {
-		reverseTable[c] = i 
+		reverseTable[c] = i
 	}
 	return reverseTable
 }
