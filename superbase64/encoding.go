@@ -72,6 +72,10 @@ func (encoding Encoding) Decode(str string) ([]byte, error) {
 	}
 
 	trimmedStr := strings.TrimRight(str, "=")
+	if (len(trimmedStr) == 0){
+		return nil, errors.New("invalid base64 string")
+	}
+
 	padding := len(str) - len(trimmedStr)
 	decoded := make([]byte, (len(str)/4*3)-padding)
 	decodedIndex := 0
