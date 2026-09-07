@@ -10,7 +10,7 @@ A Base64 encoding and decoding library for Go, implementing RFC 4648.
 ## Installation
 
 ```bash
-go get github.com/is386/super-base-64
+go get github.com/1nderr/super-base-64
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/is386/super-base-64/superbase64"
+	"github.com/1nderr/super-base-64/superbase64"
 )
 
 func main() {

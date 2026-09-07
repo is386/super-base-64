@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/is386/super-base-64/superbase64"
+	"github.com/1nderr/super-base-64/superbase64"
 )
 
 func main() {
